@@ -42,7 +42,9 @@ for i in xrange(8):
     if 0xF8 | i < 0xFD:
         mnemonics['t%d'      % (i+1)] = chr(0xF8 | i)
         mnemonics['both%d'   % (i+1)] = chr(0xF8 | i)
-
+for i in xrange(16):
+    mnemonics['junk%d'   % (i+1)] = chr(0xA0 | i)
+    
 def compile_num(i):
     if 0 <= i <= 10:
         return chr(i + 0x10)
